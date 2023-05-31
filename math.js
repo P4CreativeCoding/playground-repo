@@ -20,4 +20,9 @@ function divide(a, b) {
   return a / b;
 }
 
-module.exports = { add, subtract, multiply, divide };
+
+function square(a) {
+  return multiply(a, a);
+}
+
+module.exports = { add, subtract, multiply, divide, square };
