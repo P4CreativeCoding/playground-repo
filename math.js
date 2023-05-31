@@ -25,4 +25,16 @@ function square(a) {
   return multiply(a, a);
 }
 
-module.exports = { add, subtract, multiply, divide, square };
+
+function sqrt(a) {
+  if (a < 0) {
+    throw new Error('Cannot calculate the square root of a negative number');
+  }
+  let guess = a / 2;
+  for (let i = 0; i < 10; i++) {
+    guess = (guess + (a / guess)) / 2;
+  }
+  return guess;
+}
+
+module.exports = { add, subtract, multiply, divide, square, sqrt };
