@@ -37,4 +37,9 @@ function sqrt(a) {
   return guess;
 }
 
-module.exports = { add, subtract, multiply, divide, square, sqrt };
+
+function cube(a) {
+  return multiply(a, square(a));
+}
+
+module.exports = { add, subtract, multiply, divide, square, sqrt, cube };
