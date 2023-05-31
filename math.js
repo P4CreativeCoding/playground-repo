@@ -42,4 +42,13 @@ function cube(a) {
   return multiply(a, square(a));
 }
 
-module.exports = { add, subtract, multiply, divide, square, sqrt, cube };
+
+function cbrt(a) {
+  let guess = a / 3;
+  for (let i = 0; i < 10; i++) {
+    guess = (2 * guess + a / square(guess)) / 3;
+  }
+  return guess;
+}
+
+module.exports = { add, subtract, multiply, divide, square, sqrt, cube, cbrt };
